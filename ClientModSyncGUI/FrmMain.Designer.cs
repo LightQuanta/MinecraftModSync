@@ -49,7 +49,6 @@
             // 
             this.GroupSync.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupSync.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GroupSync.Controls.Add(this.label1);
             this.GroupSync.Controls.Add(this.BtnSelectProgram);
             this.GroupSync.Controls.Add(this.TxtCommand);
@@ -119,7 +118,7 @@
             "执行程序并退出"});
             this.ComboAction.Location = new System.Drawing.Point(80, 95);
             this.ComboAction.Name = "ComboAction";
-            this.ComboAction.Size = new System.Drawing.Size(458, 25);
+            this.ComboAction.Size = new System.Drawing.Size(254, 25);
             this.ComboAction.TabIndex = 9;
             this.ComboAction.SelectedIndexChanged += new System.EventHandler(this.ComboAction_SelectedIndexChanged);
             // 
@@ -140,7 +139,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtServerName.Location = new System.Drawing.Point(6, 39);
             this.TxtServerName.Name = "TxtServerName";
-            this.TxtServerName.Size = new System.Drawing.Size(451, 23);
+            this.TxtServerName.Size = new System.Drawing.Size(532, 23);
             this.TxtServerName.TabIndex = 7;
             this.TxtServerName.TextChanged += new System.EventHandler(this.TxtServerName_TextChanged);
             // 
@@ -156,9 +155,10 @@
             // BtnSync
             // 
             this.BtnSync.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSync.Location = new System.Drawing.Point(463, 39);
+            this.BtnSync.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnSync.Location = new System.Drawing.Point(340, 68);
             this.BtnSync.Name = "BtnSync";
-            this.BtnSync.Size = new System.Drawing.Size(75, 23);
+            this.BtnSync.Size = new System.Drawing.Size(198, 53);
             this.BtnSync.TabIndex = 5;
             this.BtnSync.Text = "同步Mod";
             this.BtnSync.UseVisualStyleBackColor = true;
@@ -166,8 +166,7 @@
             // 
             // BtnResetConfig
             // 
-            this.BtnResetConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnResetConfig.Location = new System.Drawing.Point(274, 22);
+            this.BtnResetConfig.Location = new System.Drawing.Point(107, 27);
             this.BtnResetConfig.Name = "BtnResetConfig";
             this.BtnResetConfig.Size = new System.Drawing.Size(95, 33);
             this.BtnResetConfig.TabIndex = 9;
@@ -192,8 +191,9 @@
             // 
             // ChkAutoUpdate
             // 
+            this.ChkAutoUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChkAutoUpdate.AutoSize = true;
-            this.ChkAutoUpdate.Location = new System.Drawing.Point(80, 29);
+            this.ChkAutoUpdate.Location = new System.Drawing.Point(382, 34);
             this.ChkAutoUpdate.Name = "ChkAutoUpdate";
             this.ChkAutoUpdate.Size = new System.Drawing.Size(75, 21);
             this.ChkAutoUpdate.TabIndex = 12;
@@ -203,7 +203,8 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(6, 24);
+            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUpdate.Location = new System.Drawing.Point(463, 28);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(68, 31);
             this.BtnUpdate.TabIndex = 11;
@@ -213,7 +214,7 @@
             // 
             // BtnSaveConfig
             // 
-            this.BtnSaveConfig.Location = new System.Drawing.Point(161, 22);
+            this.BtnSaveConfig.Location = new System.Drawing.Point(6, 27);
             this.BtnSaveConfig.Name = "BtnSaveConfig";
             this.BtnSaveConfig.Size = new System.Drawing.Size(95, 33);
             this.BtnSaveConfig.TabIndex = 10;
@@ -254,7 +255,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(568, 452);
             this.Controls.Add(this.TxtLog);
             this.Controls.Add(this.Progress);

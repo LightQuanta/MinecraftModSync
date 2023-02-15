@@ -1,7 +1,7 @@
 ﻿namespace ClientModSyncGUI {
     public class Config {
         public static readonly string ConfigVersion = "1.0";
-        public static readonly string ClientVersion = "1.0";
+        public static readonly string ClientVersion = "1.0.1";
 
         public enum AfterSyncAction {
             Exit,
