@@ -140,7 +140,6 @@ namespace ClientModSyncGUI {
         }
 
         private void BtnSync_Click(object sender, EventArgs e) {
-
             SyncMods();
         }
         private void Log(string Text) {
@@ -159,9 +158,6 @@ namespace ClientModSyncGUI {
                     filelist = await client.GetStringAsync($"http://mcmod.lq0.tech/filelist-{ServerName}.csv");
                 } catch (HttpRequestException ex) {
                     if (ex.StatusCode == HttpStatusCode.NotFound) {
-                        if (File.Exists("server.txt")) {
-                            File.Delete("server.txt");
-                        }
                         Log("该服务器不存在！");
                     } else {
                         Log("出现未知错误");
@@ -171,7 +167,6 @@ namespace ClientModSyncGUI {
                     GroupConfig.Enabled = true;
                     return;
                 }
-                File.WriteAllText("server.txt", ServerName);
                 Log("正在检测本地mod");
                 var sha = SHA256.Create();
                 Dictionary<string, string> files = new();
