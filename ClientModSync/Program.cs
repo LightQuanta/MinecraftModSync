@@ -4,6 +4,13 @@ using System.Web;
 
 namespace ClientModSync {
     public static class Program {
+        //Console.WriteLine(Assembly.GetExecutingAssembly().GetName().Version);
+        //Console.WriteLine(Environment.ProcessPath);
+        //File.Delete(Environment.ProcessPath + ".old");
+        //if (Environment.ProcessPath != null) {
+        //  File.Move(Environment.ProcessPath, Environment.ProcessPath + ".old");
+        //}
+        //return;
         public static async Task Main(string[] args) {
 
             if (!Directory.Exists(".minecraft")) {
