@@ -238,7 +238,9 @@ namespace ClientModSyncGUI {
                 }
                 if (SyncConfig.ActionAfterSync == Config.AfterSyncAction.ExecuteCommand) {
                     try {
-                        Process.Start(SyncConfig.Command);
+                        ProcessStartInfo StartInfo = new(SyncConfig.Command);
+                        StartInfo.UseShellExecute = true;
+                        Process.Start(StartInfo);
                     } catch (Exception ex) {
                         MessageBox.Show("启动程序出现错误，请检查你的启动设置\n" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCommand.Focus();
@@ -246,7 +248,10 @@ namespace ClientModSyncGUI {
                 }
                 if (SyncConfig.ActionAfterSync == Config.AfterSyncAction.ExecuteCommandAndExit) {
                     try {
-                        Process.Start(SyncConfig.Command);
+                        ProcessStartInfo StartInfo = new(SyncConfig.Command);
+                        StartInfo.UseShellExecute = true;
+                        Process.Start(StartInfo);
+
                         Application.Exit();
                     } catch (Exception ex) {
                         MessageBox.Show("启动程序出现错误，请检查你的启动设置\n" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
